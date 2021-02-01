@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta charset="utf-8" />
+		<title>SIMON GAME</title>
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+			integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css"
+			integrity="sha512-oc9+XSs1H243/FRN9Rw62Fn8EtxjEYWHXRvjS43YtueEewbS6ObfXcJNyohjHqVKFPoXXUxwc+q1K7Dee6vv9g=="
+			crossorigin="anonymous"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Press+Start+2P"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+
+	<body>
+		<div class="container-fluid">
+			<div class="row simon-content">
+				<div class="col-12">
+					<!-- SPIELFLÄCHE -->
+					<h1 id="game-name">SIMON GAME</h1>
+					<p id="level-title">
+						Taste drücken um Spiel zu starten
+						<div class="info">
+							<button
+								class="fa-btn myModal"
+								data-toggle="modal"
+								data-target="#myModal"
+							>
+								<i class="far fa-question-circle faIcon"></i>
+							</button>
+						</div>
+          			</p>
+					<div class="row">
+						<div class="col-12">
+							<div class="game-button-wrapper">
+								<div type="button" id="green" class="button green"></div>
+								<div type="button" id="red" class="button red"></div>
+								<div type="button" id="yellow" class="button yellow"></div>
+								<div type="button" id="blue" class="button blue"></div>
+							</div>
+						</div>
+					</div>
+					
+
+					<div class="row">
+						<p id="highscore">Highscore: <span id="highscoreNumber"></span></p>
+					</div>
+					<div class="row">
+						<button id="start-btn" class="game-btn btn btn-large btn-success">
+							<i class="fas fa-gamepad game-icon"></i> START!
+						</button>
+					</div>
+				</div>
+
+				<!-- Spielanleitung -->
+				<div class="modal fade" id="myModal">
+					<div
+						class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+					>
+						<div class="modal-content">
+							<!-- Modal Header -->
+							<div class="modal-header">
+								<h4 class="modal-title">Spielregeln</h4>
+								<button type="button" class="close" data-dismiss="modal">
+									&times;
+								</button>
+							</div>
+
+							<!-- Modal body -->
+							<div class="modal-body">
+								<p>
+									Bereit für ein temporeiches Spiel mit Farben und Geräuschen?
+									»Simon« fordert dich mit jeder Farbfolge neu heraus. Um
+									Simon zu besiegen, gilt es, dir das Muster gut zu merken und
+									dann die bunten Felder in der richtigen Reihenfolge zu
+									klicken.
+								</p>
+								<h4>Spielablauf:</h4>
+								<p>
+									Nach einem Klick auf den Start-Button oder einer Taste auf
+									deinem Keyboard startet das Spiel und es ertönt ein Sound und
+									die dazugehörige Farbe blinkt auf. Mit einem Klick auf die
+									grade angezeigte Farbe landest du in der nächsten Runde.
+									Dort wird eine zweite Farbe mit dem dazugehörigen Sound
+									abgespielt. <br /><br />
+									Du musst nun zuerst die Farbe aus der ersten Runde anklicken
+									und erst danach die Farbe, die dir grade angezeigt wurde. So geht es
+									nun immer weiter. Präge dir die gesamte
+									Farb-/Sound-Folge genau ein, klicke alle bisher gesehenen Farben an und klicke zum Abschluss eines Levels die
+									zuletzt angezeigte Farbe an. Im Laufe des Spiels wird es immer
+									schwieriger und in jeder Runde steigt die Spannung weiter an.
+									Wie viele Farb-/Sound-Kombinationen kannst du dir merken?
+									Dein Highscore wird lokal in deinem Browser gespeichert und du
+									kannst so immer wieder versuchen, den bisherigen Highscore zu
+									knacken.
+								</p>
+								<h4 style="text-align: ceenter">Viel Erfolg!</h4>
+							</div>
+
+							<!-- Modal footer -->
+							<div class="modal-footer">
+								<button
+									type="button"
+									class="btn btn-danger"
+									data-dismiss="modal"
+								>
+									Close
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<footer class="simon-footer">
+						<p id="copyright"> Copyright by Sarah Baldin ⓒ <span id="year"></span> </p>
+					</footer>
+				</div>
+			</div>	
+		</div>
+
+		<script type="text/javascript">
+			  const year = new Date().getFullYear();
+			  document.getElementById("year").innerText = year;
+		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"
+			integrity="sha512-8qmis31OQi6hIRgvkht0s6mCOittjMa9GMqtK9hes5iEQBQE/Ca6yGE5FsW36vyipGoWQswBj/QBm2JR086Rkw=="
+			crossorigin="anonymous"
+		></script>
+
+		<script src="./game.js" charset="utf-8"></script>
+	</body>
+</html>

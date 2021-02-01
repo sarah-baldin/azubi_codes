@@ -1,0 +1,520 @@
+#keeperApp {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	width: 100vw;
+	min-height: 100vh;
+	font-family: "Montserrat", sans-serif;
+}
+
+.keeper-content {
+	min-height: calc(100vh - 230px);
+}
+
+.keeper-notes {
+	width: 80%;
+	height: auto;
+	margin: auto;
+}
+
+.keeper-info-box {
+	max-width: 1400px;
+	margin: 0 auto 50px;
+	color:  #000;
+	background-color: #fff;
+	text-align: left;
+	border-radius: 7px;
+	-webkit-box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow:    0px 0px 15px 4px rgba(0, 0, 0, 0.3);
+	box-shadow:         0px 0px 15px 4px rgba(0, 0, 0, 0.3);
+	padding: 30px;
+}
+
+.keeper-info-box h3 {
+	text-align: center;
+}
+
+.keeper-info-box p {
+	font-size: 0.9rem;
+}
+
+.zoom-container {
+	display: flex;
+	justify-content: center;
+}
+
+.zoom-container img {
+	width: 550px;
+	transition: transform 0.25s ease;
+	cursor: zoom-in;
+}
+
+input[type=checkbox]#zoomCheck {
+	display: none;
+}
+
+input[type=checkbox]#zoomCheck:checked ~ label > img {
+	transform: scale(1.7);
+	cursor: zoom-out;
+}
+
+
+
+#keeper-header {
+	font-family: "Lobster", sans-serif;
+	font-size: 2.5rem;
+	font-weight: 200;
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.5);
+	height: auto;
+	padding: 16px 32px;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+	float: left;
+	font-size: 2.5rem;
+}
+
+.keeper-content {
+	height: auto;
+	margin: 0 auto 50px;
+	max-width: 1400px;
+}
+
+.keeper-content p, .keeper-content ul {
+	font-size: 0.9rem;
+}
+
+#logo-icon {
+	font-size: 3rem;
+}
+
+#user-logout {
+	display: none;
+}
+
+#register-button {
+	display: none;
+}
+
+.power-off-icon {
+	display: block;
+	margin: auto;
+}
+
+.btn-text {
+	font-family: "Montserrat", sans-serif;
+	margin: auto 5px;
+}
+
+.header-login {
+	text-align: right;
+}
+
+.username-wrapper {
+	display: inline-block;
+	line-height: 1.2;
+}
+
+
+.register-btn-wrapper {
+	display: inline-block;
+	position: relative;
+	bottom: 8px;
+	margin-left: 15px;
+}
+
+
+.keeper-footer {
+	text-align: center;
+	width: 100%;
+	padding: 15px 0;
+	background-color:rgba(0, 0, 0, 0.3);
+	color: #fff;
+}
+
+.keeper-footer p {
+	padding: 0;
+	height: 15px;
+	color: #fff;
+}
+
+.keeper-footer a {
+	display: inline-block;
+	font-family: "Montserrat", sans-serif;
+	font-size: 1rem;
+	color:#6059E6;
+	text-decoration: underline;
+	padding: 0 3px;
+	background: none;
+	border: none;
+	cursor: pointer;
+	box-shadow: none;
+}
+
+.keeper-footer a:hover {
+	color:  fff;
+	text-decoration: none;
+}
+
+#deleteUser {
+	display: inline-block;
+	font-family: "Montserrat", sans-serif;
+	color:rgb(255, 193, 50);
+	text-decoration: underline;
+	background: none;
+	border: none;
+	cursor: pointer;
+	box-shadow: none;
+}
+
+#deleteUser:hover {
+	color:red;
+	text-decoration: none;
+}
+
+button.MuiFab-root:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.note {
+	background: rgba(255, 255, 255, 0.5);
+	color: #000;
+	text-align: left;
+	border-radius: 7px;
+	box-shadow: 0 2px 5px #ccc;
+	padding: 10px;
+	width: 80%;
+	max-width: 240px;
+	height: 250px;
+	margin: 16px;
+	float: left;
+}
+
+.note-content {
+	height: 180px;
+}
+
+.note h4 {
+	font-size: 1.4em;
+	font-weight: 600;
+	text-align: left;
+	margin-bottom: 6px;
+}
+
+.note p {
+	font-size: 1.1em;
+	margin-bottom: 10px;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+.note button {
+	position: relative;
+	top: 14px;
+	float: right;
+	color: #ccc;
+	border: none;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	outline: none;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    margin: 1%;
+    color: #fff;
+    background-color: #333;
+    outline: none;
+    padding: 0.5rem 1.5rem;
+    box-shadow: 0 0.3rem rgba(121,121,121,0.65);
+}
+
+.note button:hover {
+	background-color: rgb(255, 135, 23);
+	color: rgba(0, 0, 0, 0.8);
+}
+
+.note button#save-button {
+	position: relative;
+	text-decoration: none;
+	color: green;
+	border: none;
+	border-radius: 0;
+	background: none;
+	width: 80px;
+	padding: 0;
+	box-shadow: none;
+	float: left;
+}
+
+#delete-icon, #edit-icon {
+	position: absolute;
+	top: 3px;
+	right: 11px;
+	font-size: 1.4rem;
+}
+
+form.create-note {
+	position: relative;
+	width: 480px;
+	margin: 30px auto 20px auto;
+	background: #fff;
+	padding: 15px;
+	border-radius: 7px;
+	box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+
+form.create-note input,
+form.create-note textarea {
+	width: 100%;
+	border: none;
+	padding: 4px;
+	outline: none;
+	font-size: 1.2rem;
+	font-family: inherit;
+	resize: none;
+}
+
+form.create-note button {
+	position: absolute;
+	right: 18px;
+	bottom: -18px;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	border: none;
+	border-radius: 50%;
+	width: 36px;
+	height: 36px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+	cursor: pointer;
+	outline: none;
+}
+
+.accept-terms {
+	padding: 5px 0 0;
+}
+
+#accept-terms-checkbox {
+	margin-right: 8px;
+}
+
+
+/* POPUP & REGISTER/LOGIN FORM STYLES */
+.popup {
+	display: none;
+	position: fixed;
+	max-width: 500px;
+	max-height: 500px; 
+	bottom: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: 9;
+}
+
+.popup-head {
+	width: auto;
+	height: 40px;
+	background-color:#3B368B;
+}
+
+.close-popup {
+	position: relative;
+	display: block;
+	float: right;
+	margin: 10px;
+	width: 20px;
+	height: auto;
+	font-weight: bold;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.panel-heading button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 20px;
+}
+
+.panel-heading button#login-form-link {
+	float: left;
+}
+
+.panel-heading button#register-form-link {
+	float: right;
+}
+
+.popup-container {
+	max-width: 500px;
+	max-height: 500px;
+	margin: auto;
+	padding: 30px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+	background-color: white;
+}
+
+.form-btn {
+	display: inline-block;
+	font-family: "Montserrat", sans-serif;
+	color:rgb(65, 65, 65);
+	font-weight: 600;
+	text-decoration: none;
+	background: none;
+	border: none;
+	padding: auto;
+	cursor: pointer;
+	box-shadow: none;
+}
+
+.form-btn:hover {
+	color: #fff;
+	background-color: #3B368B;
+}
+
+.form-btn:focus {
+	color: #fff;
+	background-color: #3B368B;
+}
+
+
+.btn-form {
+	color: #fff;
+	background-color: #3B368B;
+	font-weight: 600;
+	border: none;
+}
+
+.form-tooltip {
+	display: none;
+	font-size: 12px;
+	color: red;
+}
+
+p.form-tooltip-info-general {
+	font-size: 0.7rem;
+	color: rgb(175, 116, 6);
+}
+
+p.form-tooltip-info-general#form-tooltip-login-general {
+	display: none;
+	color: rgb(228, 0, 0);
+}
+
+.swal2-popup h2 {
+	font-family: Lobster, Montserrat, Arial, Helvetica, sans-serif;
+	font-size: 2.5rem;
+}
+
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 767px) {
+	header, .header-login {
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 530px) {
+	.keeper-info-box {
+		width: 94%;
+		padding: 15px;
+	}
+	
+	.keeper-content p, .keeper-content ul {
+		font-size: 0.8rem;
+	}
+
+	.keeper-alert-info {
+		width: 90%;
+		margin: 25px auto;
+	}
+
+	form.create-note {
+		width: 80%;
+		max-width: 300px;
+		margin: 15px auto 15px;
+	}
+
+	form.create-note input,
+	form.create-note textarea {
+		font-size: 1rem;
+	}
+	
+	.note {
+		float: none;
+		margin: 16px auto;
+	}
+
+	.note p {
+		font-size: 0.9rem;
+	}
+
+	.note h4 {
+		font-size: 1.2rem;
+	}
+
+	.popup {
+		width: 85%;
+	}
+	
+	header h1 {
+		color: #fff;
+		font-family: "Lobster", sans-serif;
+		font-size: 2rem;
+		text-align: center;
+	}
+
+	header button {
+		font-family: "Comfortaa", sans-serif;
+		font-size: 1.5rem;
+		text-align: center;
+	}
+
+	.panel-heading button {
+		font-size: 0.9rem;
+		display: flex;
+		padding: 0;
+	}
+
+	#logged-in-user {
+		font-size: 1.5rem;
+	}
+
+	#logo-icon {
+		font-size: 2rem;
+	}
+
+	.register-btn {
+		font-size: 0.8rem;
+		border-radius: 50%;
+		box-shadow: none;
+		color: #aaa6ff;
+	}
+
+	#register-button {
+		font-weight: 600;
+		border-radius: 5px;
+		color: #fff;
+	}
+
+	.register-btn:hover {
+		color: #bd1711;
+	}
+
+	.power-off-icon .btn-text {
+		display: none;
+	}
+
+	.power-off-icon {
+		display: block;
+		margin: auto;
+	}
+
+	.keeper-footer p, .keeper-footer a {
+		font-size: 0.8rem;
+	}
+}
